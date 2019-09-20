@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
+    "history": "^4.10.1",
+    "prop-types": "^15.7.2",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "latest",
@@ -21,7 +23,8 @@
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-react-native": "latest",
-    "prettier": "latest"
+    "prettier": "latest",
+    "reactotron-react-js": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
