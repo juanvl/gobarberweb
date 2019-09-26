@@ -1,7 +1,39 @@
 import React from 'react';
-
+import { useSelector } from 'react-redux';
+import { Form, Input } from '@rocketseat/unform';
 import * as S from './styles';
 
-const Profile = () => <S.Container>Profile</S.Container>;
+const Profile = () => {
+  const profile = useSelector(state => state.user.profile);
+
+  function handleSubmit(data) {}
+
+  return (
+    <S.Container>
+      <Form initialData={profile} onSubmit={handleSubmit}>
+        <Input name="name" placeholder="Nome completo" />
+        <Input name="email" placeholder="Seu email" />
+
+        <hr />
+
+        <Input
+          type="password"
+          name="oldPassword"
+          placeholder="Sua senha atual"
+        />
+        <Input type="password" name="password" placeholder="Sua nova senha" />
+        <Input
+          type="password"
+          name="confirmPassword"
+          placeholder="Confirme sua nova senha"
+        />
+
+        <button type="submit">Atualizar perfil</button>
+      </Form>
+
+      <button type="button">Sair do GoBarber</button>
+    </S.Container>
+  );
+};
 
 export default Profile;
